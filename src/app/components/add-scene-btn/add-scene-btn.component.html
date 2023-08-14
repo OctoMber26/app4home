@@ -1,0 +1,136 @@
+<ion-button
+  class="oppen-room-modal"
+  size="default"
+  id="open-modal"
+  expand="block"
+>
+  <ion-icon slot="end" src="/assets/images/add-icon.svg"></ion-icon>
+  Add new scene</ion-button
+>
+
+<ion-modal [keepContentsMounted]="true" trigger="open-modal" #modal>
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button (click)="modal.dismiss()">
+            <ion-icon src="/assets/images/close-icon.svg"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-label>
+        Scene name
+        <ion-input
+          aria-label="Type here"
+          placeholder="Type here"
+          class="custom"
+        ></ion-input>
+      </ion-label>
+      <ion-label>
+        Room icon
+        <div class="scenes-icons">
+          <ion-icon src="/assets/images/furniture.svg"></ion-icon>
+          <ion-icon src="/assets/images/sofa.svg"></ion-icon>
+          <ion-icon src="/assets/images/lamp.svg"></ion-icon>
+          <ion-icon src="/assets/images/wardrobe.svg"></ion-icon>
+        </div>
+      </ion-label>
+      <div class="triggers-actions">
+        <ion-item
+          class="triggers"
+          lines="none"
+          id="open-triggers-modal"
+          expand="block"
+        >
+          <ion-modal
+            [keepContentsMounted]="true"
+            trigger="open-triggers-modal"
+            #modal
+          >
+            <ng-template>
+              <ion-header>
+                <ion-toolbar>
+                  <ion-buttons slot="end">
+                    <ion-button (click)="modal.dismiss()">
+                      <ion-icon src="/assets/images/close-icon.svg"></ion-icon>
+                    </ion-button>
+                  </ion-buttons>
+                </ion-toolbar>
+              </ion-header>
+              <ion-content class="ion-padding">
+                <ion-label>
+                  Add new trigger
+                  <ion-input
+                    aria-label="Type here"
+                    placeholder="Type here"
+                    class="custom"
+                  ></ion-input>
+                </ion-label>
+              </ion-content>
+              <ion-button
+                class="save-scene"
+                size="default"
+                id="open-modal"
+                expand="block"
+              >
+                Save trigger</ion-button
+              >
+            </ng-template>
+          </ion-modal>
+
+          <p slot="start">Triggers</p>
+          <ion-icon src="/assets/images/add-icon.svg" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item
+          class="triggers"
+          lines="none"
+          id="open-actions-modal"
+          expand="block"
+        >
+          <p slot="start">Actions</p>
+          <ion-icon src="/assets/images/add-icon.svg" slot="end"></ion-icon>
+        </ion-item>
+        <ion-modal
+          [keepContentsMounted]="true"
+          trigger="open-actions-modal"
+          #modal
+        >
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-buttons slot="end">
+                  <ion-button (click)="modal.dismiss()">
+                    <ion-icon src="/assets/images/close-icon.svg"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+              <ion-label>
+                Add new action
+                <ion-input
+                  aria-label="Type here"
+                  placeholder="Type here"
+                  class="custom"
+                ></ion-input>
+              </ion-label>
+            </ion-content>
+            <ion-button
+              class="save-scene"
+              size="default"
+              id="open-modal"
+              expand="block"
+            >
+              Save action</ion-button
+            >
+          </ng-template>
+        </ion-modal>
+      </div>
+    </ion-content>
+    <ion-button class="add-scene" size="default" id="open-modal" expand="block">
+      Add new room</ion-button
+    >
+  </ng-template>
+</ion-modal>
