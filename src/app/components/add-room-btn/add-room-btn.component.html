@@ -1,0 +1,94 @@
+<ion-button
+  class="oppen-room-modal"
+  size="default"
+  id="open-modal"
+  expand="block"
+>
+  <ion-icon slot="end" src="/assets/images/add-icon.svg"></ion-icon>
+  Add new room</ion-button
+>
+
+<ion-modal [keepContentsMounted]="true" trigger="open-modal" #modal>
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button (click)="modal.dismiss()">
+            <ion-icon src="/assets/images/close-icon.svg"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-label>
+        Room name
+        <ion-input
+          aria-label="Type here"
+          placeholder="Type here"
+          class="custom"
+        ></ion-input>
+      </ion-label>
+      <ion-label>
+        Room icon
+        <div class="room-icons">
+          <ion-icon src="/assets/images/kitchen.svg"></ion-icon>
+          <ion-icon src="/assets/images/living-room.svg"></ion-icon>
+          <ion-icon src="/assets/images/bed-room.svg"></ion-icon>
+        </div>
+      </ion-label>
+      <ion-label>
+        Asign to floor
+        <div class="room-sections">
+          <ion-card class="floor-type">
+            <ion-icon
+              class="drag-icon"
+              src="/assets/images/drag&drop-icon.svg"
+            ></ion-icon>
+            <ion-card-header>
+              <ion-card-title>Etaj cu o cameră</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-icon
+                class="room-icon"
+                src="/assets/images/room-type-icon.svg"
+              ></ion-icon>
+            </ion-card-content>
+          </ion-card>
+          <ion-card class="floor-type">
+            <ion-icon
+              class="drag-icon"
+              src="/assets/images/drag&drop-icon.svg"
+            ></ion-icon>
+            <ion-card-header>
+              <ion-card-title>Etaj cu o cameră</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-icon
+                class="room-icon"
+                src="/assets/images/room-type-icon.svg"
+              ></ion-icon>
+            </ion-card-content>
+          </ion-card>
+          <ion-card class="floor-type">
+            <ion-icon
+              class="drag-icon"
+              src="/assets/images/drag&drop-icon.svg"
+            ></ion-icon>
+            <ion-card-header>
+              <ion-card-title>Etaj cu o cameră</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-icon
+                class="room-icon"
+                src="/assets/images/room-type-icon.svg"
+              ></ion-icon>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-label>
+    </ion-content>
+    <ion-button class="add-room" size="default" id="open-modal" expand="block">
+      Add new room</ion-button
+    >
+  </ng-template>
+</ion-modal>

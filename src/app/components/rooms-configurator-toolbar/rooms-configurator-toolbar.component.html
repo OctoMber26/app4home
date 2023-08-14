@@ -1,0 +1,72 @@
+<ion-toolbar class="devices-toolbar">
+  <ion-button
+    slot="start"
+    size="default"
+    fill="clear"
+    id="open-modal"
+    expand="block"
+  >
+    <ion-icon slot="start" src="/assets/images/configurator.svg"></ion-icon>
+    Configurator</ion-button
+  >
+  <ion-item lines="none">
+    <ion-label class="configurator-section">
+      <ion-icon src="/assets/images/room configuration.svg"></ion-icon>
+      Rooms configurator
+    </ion-label>
+  </ion-item>
+
+  <ion-button
+    slot="end"
+    size="default"
+    fill="clear"
+    id="open-modal"
+    expand="block"
+    class="back-btn"
+  >
+    <ion-icon slot="start" src="/assets/images/back-arrow.svg"></ion-icon>
+    Back</ion-button
+  >
+</ion-toolbar>
+
+<ion-modal #modal trigger="open-modal">
+  <ng-template>
+    <ion-content>
+      <ion-toolbar>
+        <ion-title>Configurator</ion-title>
+      </ion-toolbar>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-label class="configurator-section">
+            <ion-icon src="assets/images/devices configurator.svg"></ion-icon>
+            Devices Configuration
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label class="configurator-section">
+            <ion-icon src="/assets/images/room configuration.svg"></ion-icon>
+            Rooms configurator
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label class="configurator-section">
+            <ion-icon src="/assets/images/floors.svg"></ion-icon>
+            Floors configurator
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label class="configurator-section">
+            <ion-icon src="/assets/images/scenes.svg"></ion-icon>
+            Scenes configurator
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label class="configurator-section">
+            <ion-icon src="/assets/images/project settings.svg"></ion-icon>
+            Project settings
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-modal>

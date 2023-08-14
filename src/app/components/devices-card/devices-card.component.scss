@@ -1,0 +1,153 @@
+.devices-card {
+  width: 488px;
+  height: 347px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: none;
+
+  .title {
+    color: #1a3d78;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .blur-buletpoint {
+    width: 23px;
+    height: 22px;
+    flex-shrink: 0;
+    background-color: #e08a5a;
+    filter: blur(9px);
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+
+  .buletpoint {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    background-color: #e08a5a;
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.4));
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    border-radius: 5px;
+  }
+}
+
+ion-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  margin-inline: 0;
+  overflow-y: scroll;
+}
+
+.device {
+  width: 137.941px;
+  height: 149px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #ccdafc;
+  backdrop-filter: blur(50px);
+  margin-inline: 0;
+  box-shadow: none;
+  text-align: center;
+
+  .devices-name {
+    color: #fff;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  ion-label {
+    color: #fff;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 3px;
+  }
+
+  ion-icon {
+    font-size: 40px;
+    margin: auto auto;
+    margin-top: 5px;
+  }
+
+  .detail-icon {
+    font-size: 12px;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  height: 29px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #9df9d6;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #9df9d6;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(33px);
+  -ms-transform: translateX(33px);
+  transform: translateX(33px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
