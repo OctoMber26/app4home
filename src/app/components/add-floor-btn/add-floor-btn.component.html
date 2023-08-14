@@ -1,0 +1,44 @@
+<ion-button
+  class="oppen-room-modal"
+  size="default"
+  id="open-modal"
+  expand="block"
+>
+  <ion-icon slot="end" src="/assets/images/add-icon.svg"></ion-icon>
+  Add new floor</ion-button
+>
+
+<ion-modal [keepContentsMounted]="true" trigger="open-modal" #modal>
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button (click)="modal.dismiss()">
+            <ion-icon src="/assets/images/close-icon.svg"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-label>
+        Floor name
+        <ion-input
+          aria-label="Type here"
+          placeholder="Type here"
+          class="custom"
+        ></ion-input>
+      </ion-label>
+      <ion-label>
+        Floor icon
+        <div class="room-icons">
+          <ion-icon src="/assets/images/floor-icon.svg"></ion-icon>
+          <ion-icon src="/assets/images/floor-icon.svg"></ion-icon>
+          <ion-icon src="/assets/images/floor-icon.svg"></ion-icon>
+        </div>
+      </ion-label>
+    </ion-content>
+    <ion-button class="add-room" size="default" id="open-modal" expand="block">
+      Add new room</ion-button
+    >
+  </ng-template>
+</ion-modal>
